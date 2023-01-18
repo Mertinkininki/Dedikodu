@@ -1,11 +1,7 @@
 import os
 import heroku3
 from telethon import TelegramClient, events
-#
-# Buranı qurdalama
-# Yalnız deploy buttonuyla botunu yarat
-# 
-api_id = int(os.environ.get("APP_ID", "19764472"))
+api_id = int(os.environ.get("APP_ID", ""))
 api_hash = os.environ.get("API_HASH, "1bb18890c8b4041cc66cb36ab796afca")
 bot_token = os.environ.get("TOKEN", "5847695315:AAHwxw9EDcSI_khrdlC16cyCYpLnU4fRPK8")
 # Telethon 
@@ -15,7 +11,7 @@ admin_qrup = int(os.environ.get("ADMIN_QRUP"))
 etiraf_qrup = int(os.environ.get("ETIRAF_QRUP"))
 kanal = os.environ.get("kanal")
 log_qrup = int(os.environ.get("LOG_QRUP", "-1001867312382"))
-botad = os.environ.get("BOT_AD")
+botad = os.environ.get("BOT_AD", "İtirafBotu")
 etirafmsg = os.environ.get("etirafmsg")
 startmesaj = os.environ.get("startmesaj")
 etirafyaz = os.environ.get("etirafyaz")
