@@ -7,8 +7,8 @@ bot_token = os.environ.get("TOKEN", "5847695315:AAHwxw9EDcSI_khrdlC16cyCYpLnU4fR
 # Telethon 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
-admin_qrup = int(os.environ.get("ADMIN_QRUP", "-1001223219751"))
-etiraf_qrup = int(os.environ.get("ETIRAF_QRUP", "-1001867312382"))
+admin_qrup = int(os.environ.get("ADMIN_QRUP", "-1001867312382"))
+etiraf_qrup = int(os.environ.get("ETIRAF_QRUP", "-1001223219751"))
 kanal = os.environ.get("kanal", "Kampus_itiraf")
 log_qrup = int(os.environ.get("LOG_QRUP", "-1001867312382"))
 botad = os.environ.get("BOT_AD", "İtirafBotu")
