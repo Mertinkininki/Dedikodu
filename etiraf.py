@@ -97,7 +97,7 @@ async def anonim(event):
     async for usr in client.iter_participants(event.chat_id):
      gonderen = f"[{usr.first_name}](tg://user?id={usr.id})"
      etiraf_eden = "Anonim"
-     yeni_etiraf = await client.send_message(admin_qrup, f"📣 **Yeni itiraf**\n\n🗣️ **İtiraf Edən -** {etiraf_eden} \n📜 **İtirafı -** {mesaj} \n\n📣 İtirafınızı {botad} -a edin")
+     yeni_etiraf = await client.send_message(admin_qrup, f"📣 **Yeni itiraf**\n\n🗣️ **İtiraf Eden -** {etiraf_eden} \n📜 **İtirafı -** {mesaj} \n\n📣 İtirafınızı {botad} -a edin")
      tesdiq = await yeni_etiraf.reply("İtiraf Kabul Edilsin mi?", buttons=(
                       [
                        Button.inline("✅ İşlemi Kabul Et", data="tesdiq"
