@@ -34,7 +34,7 @@ async def start(event):
      await client.send_message(log_qrup, f"ℹ️ **Yeni itirafçı-** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="Kampus-itiraf")
+                       Button.inline("💌 Etiraf Yaz", data="Kampus_itiraf")
                       ],
                       [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf)],
                       [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
