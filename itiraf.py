@@ -34,7 +34,7 @@ async def start(event):
      await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
+                       Button.inline("💌 Etiraf Yaz", data="etiraf_eden")
                       ],
                       [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
@@ -53,7 +53,7 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
+                       Button.inline("💌 Etiraf Yaz", data="etiraf_eden")
                       ],
                       [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
@@ -109,7 +109,7 @@ async def anonim(event):
     await client.send_message(log_qrup, f"ℹ️ {gonderen} __Anonim Etiraf Yazdı__")
     await event.edit(f"{gonderildi}", buttons=(
                       [
-                       Button.inline("💌 Yeni Etiraf", data="etiraf"),
+                       Button.inline("💌 Yeni Etiraf", data="etiraf_eden"),
                        Button.inline("🏠 Ana Səhifə", data="start")
                       ]
                     ),
@@ -136,7 +136,7 @@ async def aciq(event):
     await client.send_message(log_qrup, f"ℹ️ {etiraf_eden} __Açıq Etiraf Yazdı__")
     await event.edit(f"{gonderildi}", buttons=(
                       [
-                       Button.inline("💌 Yeni Etiraf", data="etiraf"),
+                       Button.inline("💌 Yeni Etiraf", data="etiraf_eden"),
                        Button.inline("🏠 Ana Səhifə", data="start")
                       ]
                     ),
