@@ -36,7 +36,7 @@ async def start(event):
                       [
                        Button.inline("💌 Etiraf Yaz", data="Kampus_itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf)],
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf')],
                       [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
@@ -55,7 +55,7 @@ async def handler(event):
                       [
                        Button.inline("💌 İtiraf Yaz", data="Kampus_itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/{Kampus_itiraf')],
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf')],
                       [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
