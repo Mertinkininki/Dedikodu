@@ -5,9 +5,9 @@ from telethon import TelegramClient, events
 # Buranı qurdalama
 # Yalnız deploy buttonuyla botunu yarat
 # 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
+api_id = int(os.environ.get("APP_ID", "19764472"))
+api_hash = os.environ.get("API_HASH", "1bb18890c8b4041cc66cb36ab796afca")
+bot_token = os.environ.get("TOKEN", "5847695315:AAHwxw9EDcSI_khrdlC16cyCYpLnU4fRPK8")
 # Telethon 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
