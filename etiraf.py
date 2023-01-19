@@ -31,14 +31,14 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     await client.send_message(log_qrup, f"ℹ️ **Yeni İtirafçı -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("💌 İtiraf Yaz", data="etiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/itiraf303')],
-                      [Button.url('📣 Support', f'https://t.me/YarasaSupport'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/sessizlerkurucu')]
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf')],
+                      [Button.url('📣 Support', f'https://t.me/SohbetKampus'),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
                     link_preview=False)
 
@@ -55,9 +55,9 @@ async def handler(event):
                       [
                        Button.inline("💌 İtiraf Yaz", data="etiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/itiraf303')],
-                      [Button.url('📣 Support', f'https://t.me/YarasaSupport'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/sessizlerkurucu')]
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf')],
+                      [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
                     link_preview=False)
 
