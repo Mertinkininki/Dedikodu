@@ -34,11 +34,11 @@ async def start(event):
      await client.send_message(log_qrup, f"ℹ️ **Yeni itirafçı-** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="radyasyonitiraf")
+                       Button.inline("💌 Etiraf Yaz", data="Kampus-itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/radyasyonitiraf)],
-                      [Button.url('📣 Support', f'https://t.me/SohbetGaribanlarSokagim'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/magandasahip')]
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/Kampus_itiraf)],
+                      [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
                     link_preview=False)
 
@@ -53,11 +53,11 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 İtiraf Yaz", data="radyasyonitiraf")
+                       Button.inline("💌 İtiraf Yaz", data="Kampus_itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/{radyasyonitiraf')],
-                      [Button.url('📣 Support', f'https://t.me/SohbetGaribanlarSokagim'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/magandasahip')]
+                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/{Kampus_itiraf')],
+                      [Button.url('📣 Support', f'https://t.me/Sohbetkampus'),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/Yalnizkaranlik')]
                     ),
                     link_preview=False)
 
