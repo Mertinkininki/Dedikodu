@@ -150,13 +150,13 @@ aciq = etiraf_aciq.decode("utf8")
 async def tesdiq(event):
     global tesdiq
     async for usr in client.iter_participants(event.chat_id):
-      tesdiq = f"[{usr.first_name}](tg://user?id={usr.id})"
+      tesdiqliyen = f"[{usr.first_name}](tg://user?id={usr.id})"
     if tesdiq.reply_to_msg_id:
       etiraff = await tesdiq.get_reply_message()
       etiraf = etiraff.text
       await client.send_message(etiraf_qrup, etiraf)
-      await event.edit(f"✅ **itiraf onaylandı**")
-      
+      await event.edit(f"✅ **İtiraf Onaylandı**") 
+
 @client.on(events.callbackquery.CallbackQuery(data="sil"))
 async def sil(event):
     global tesdiq
