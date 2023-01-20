@@ -31,7 +31,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     await client.send_message(log_qrup, f"ℹ️ **Yeni Kullanıcı-** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("💌 İtiraf Yaz", data="etiraf")
@@ -109,7 +109,7 @@ async def anonim(event):
                       ]
                     ),
                     link_preview=False)
-    await client.send_message(log_qrup, f"ℹ️ {gonderen} __Anonim Etiraf Yazdı__")
+    await client.send_message(log_qrup, f"ℹ️ {gonderen} __Anonim İtiraf Yazdı__")
     await event.edit(f"{gonderildi}", buttons=(
                       [
                        Button.inline("💌 Yeni itiraf", data="etiraf"),
@@ -150,7 +150,7 @@ aciq = etiraf_aciq.decode("utf8")
 async def tesdiq(event):
     global tesdiq
     async for usr in client.iter_participants(event.chat_id):
-      tesdiqliyen = f"[{usr.first_name}](tg://user?id={usr.id})"
+      tesdiq = f"[{usr.first_name}](tg://user?id={usr.id})"
     if tesdiq.reply_to_msg_id:
       etiraff = await tesdiq.get_reply_message()
       etiraf = etiraff.text
