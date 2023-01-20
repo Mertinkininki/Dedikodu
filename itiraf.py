@@ -25,6 +25,30 @@ LOGGER = logging.getLogger(__name__)
 etiraf_eden = ["Kullanıcı seçmedi"]
 mesaj = ["Mesaj Görünmedi"]
 
+# Başlanğıc Mesajı
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+  if event.is_private:
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     return await event.reply(f"{ad} {startmesaj}", buttons=(
+                      [
+                       Button.inline("💌 İtiraf Yaz", data="etiraf")
+                      ],
+                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
+                      [Button.url('📣 Support', f'https://t.me/{support}'),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                    ),
+                    link_preview=False)
+
+
+  if event.is_group:
+    return await client.send_message(event.chat_id, f"{qrupstart}")
+
+
+
+
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
