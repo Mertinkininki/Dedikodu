@@ -154,7 +154,7 @@ async def tesdiq(event):
     if tesdiq.reply_to_msg_id:
       etiraff = await tesdiq.get_reply_message()
       etiraf = etiraff.text
-      await client.send_message(etiraf)
+      await client.send_message(etiraf_qrup)
       await event.edit(f"✅ **İtiraf Onaylandı**") 
 
 @client.on(events.callbackquery.CallbackQuery(data="sil"))
