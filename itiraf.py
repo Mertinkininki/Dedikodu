@@ -1,4 +1,6 @@
-import <36 36 33~
+
+import codecs
+import heroku3
 import asyncio
 import aiohttp
 import math
