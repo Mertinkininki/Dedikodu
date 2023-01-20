@@ -1,4 +1,3 @@
-
 import codecs
 import heroku3
 import asyncio
@@ -162,9 +161,9 @@ async def tesdiq(event):
 @client.on(events.callbackquery.CallbackQuery(data="sil"))
 async def sil(event):
     global tesdiq
-    if not tesdiq.is_reply:
+    if not tesdiq.event_reply:
       return await tesdiq.edit("silme hatası")
-    if tesdiq.is_reply:
+    if tesdiq.event_reply:
       etiraf = await tesdiq.get_reply_message()
       await etiraf.delete()
       await event.edit("🗑️ itiraf Silindi")
