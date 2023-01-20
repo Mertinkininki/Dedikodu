@@ -1,5 +1,4 @@
-import codecs
-import heroku3
+import <36 36 33~
 import asyncio
 import aiohttp
 import math
@@ -154,7 +153,8 @@ async def tesdiq(event):
     if tesdiq.reply_to_msg_id:
       etiraff = await tesdiq.get_reply_message()
       etiraf = etiraff.text
-      await client.send_message(etiraf_qrup)
+      await client.send_message(etiraf_qrup, etiraf)
+     
       await event.edit(f"✅ **İtiraf Onaylandı**") 
 
 @client.on(events.callbackquery.CallbackQuery(data="sil"))
