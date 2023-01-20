@@ -161,9 +161,9 @@ async def tesdiq(event):
 @client.on(events.callbackquery.CallbackQuery(data="sil"))
 async def sil(event):
     global tesdiq
-    if not tesdiq.event_reply:
+    if not tesdiq.reply:
       return await tesdiq.edit("silme hatası")
-    if tesdiq.event_reply:
+    if tesdiq.reply:
       etiraf = await tesdiq.get_reply_message()
       await etiraf.delete()
       await event.edit("🗑️ itiraf Silindi")
